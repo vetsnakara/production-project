@@ -10,7 +10,6 @@ module.exports = {
         'airbnb',
         'plugin:i18next/recommended',
     ],
-    overrides: [],
     parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
@@ -28,6 +27,7 @@ module.exports = {
         'import/no-unresolved': 'off',
         'import/order': 'off',
         'import/prefer-default-export': 'off',
+        'import/no-extraneous-dependencies': 'off',
         'import/extensions': [
             'error',
             'ignorePackages',
@@ -58,4 +58,12 @@ module.exports = {
     globals: {
         __IS_DEV__: true,
     },
+    overrides: [
+        {
+            files: ['**/src/**/*.test.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off',
+            },
+        },
+    ],
 };
