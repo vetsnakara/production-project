@@ -2,5 +2,7 @@
   "lang": "EN",
   "linkMainPage": "Main",
   "linkAboutPage": "About",
-  "notFoundPage": "Page not found"
+  "notFoundPage": "Page not found",
+  "pageError": "Unexpected error occured",
+  "reloadPage": "Reload page"
 }

@@ -2,5 +2,7 @@
   "lang": "RU",
   "linkMainPage": "Главная",
   "linkAboutPage": "О нас",
-  "notFoundPage": "Страница не найдена"
+  "notFoundPage": "Страница не найдена",
+  "pageError": "Произошла непредвиденная ошибка",
+  "reloadPage": "Перезагрузить страницу"
 }
