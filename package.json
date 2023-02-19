@@ -15,6 +15,7 @@
     "lint:all:fix": "npm run lint:ts:fix && npm run lint:scss:fix",
     "test:unit": "jest --config ./config/jest/jest.config.ts",
     "test:ui": "loki test",
+    "test:ui:ci": "loki --requireReference --reactUri file:./storybook-static",
     "test:ui:upd": "loki update",
     "test:ui:ok": "loki approve",
     "sb": "start-storybook -p 6006 -c ./config/storybook",

@@ -24,5 +24,9 @@ jobs:
         run: npm run lint:css
       - name: tests (unit)
         run: npm run test:unit
+      - name: build storybok
+        run: npm run sb:build
+      - name: tests (ui)
+        run: npm run test:ui:ci
       - name: build production project
         run: npm run build:prod
