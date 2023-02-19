@@ -32,12 +32,18 @@ export function buildPlugins({
     openAnalyzer: false
   });
 
+  const devOnlyPlugins = isDev
+    ? [progressPlugin, reactRefreshWebpackPlugin, bundleAnalizerPlugin]
+    : [];
+
+  const prodOnlyPlugins = !isDev
+    ? [cssExtractPlugin]
+    : [];
+
   return [
-    progressPlugin,
     htmlPlugin,
-    cssExtractPlugin,
     definePlugin,
-    bundleAnalizerPlugin,
-    ...(isDev && [reactRefreshWebpackPlugin]),
+    ...devOnlyPlugins,
+    ...prodOnlyPlugins,
   ];
 }
