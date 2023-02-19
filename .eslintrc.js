@@ -6,9 +6,10 @@ module.exports = {
         jest: true,
     },
     extends: [
-        'plugin:react/recommended',
         'airbnb',
+        'plugin:react/recommended',
         'plugin:i18next/recommended',
+        'plugin:storybook/recommended',
     ],
     parserOptions: {
         ecmaVersion: 'latest',
@@ -22,23 +23,22 @@ module.exports = {
         '@typescript-eslint/no-unused-vars': ['error'],
         'no-shadow': 'off',
         'no-underscore-dangle': 'off',
-        'max-len': ['error', { code: 100, ignoreComments: true }],
+        'max-len': ['error', {
+            code: 100,
+            ignoreComments: true,
+        }],
         // import
         'import/no-unresolved': 'off',
         'import/order': 'off',
         'import/prefer-default-export': 'off',
         'import/no-extraneous-dependencies': 'off',
-        'import/extensions': [
-            'error',
-            'ignorePackages',
-            {
-                '': 'never',
-                js: 'never',
-                jsx: 'never',
-                ts: 'never',
-                tsx: 'never',
-            },
-        ],
+        'import/extensions': ['error', 'ignorePackages', {
+            '': 'never',
+            js: 'never',
+            jsx: 'never',
+            ts: 'never',
+            tsx: 'never',
+        }],
         // react
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
@@ -58,12 +58,10 @@ module.exports = {
     globals: {
         __IS_DEV__: true,
     },
-    overrides: [
-        {
-            files: ['**/src/**/*.test.{ts,tsx}'],
-            rules: {
-                'i18next/no-literal-string': 'off',
-            },
+    overrides: [{
+        files: ['**/src/**/*.test.{ts,tsx}'],
+        rules: {
+            'i18next/no-literal-string': 'off',
         },
-    ],
+    }],
 };
