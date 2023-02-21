@@ -4,6 +4,7 @@ import {
     withGlobalStyles,
     withTheme,
     withRouter,
+    withStore,
 } from '../../src/shared/config/storybook/decorators';
 
 export const parameters = {
@@ -18,6 +19,7 @@ export const parameters = {
 
 export const decorators = [
     withGlobalStyles,
-    withTheme(Theme.LIGHT),
+    withStore,
     withRouter,
+    withTheme(Theme.LIGHT),
 ];

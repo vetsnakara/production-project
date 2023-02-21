@@ -38,5 +38,11 @@ export default ({ config }: { config: webpack.Configuration}) => {
         buildSvgLoader(),
     );
 
+    const definePlugin = new webpack.DefinePlugin({
+        __IS_DEV__: 'false',
+    });
+
+    config.plugins?.push(definePlugin);
+
     return config;
 };

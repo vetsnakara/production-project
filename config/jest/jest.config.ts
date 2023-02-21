@@ -1,6 +1,9 @@
 import path from 'path';
 
-export default {
+const config = {
+    globals: {
+        __IS_DEV__: false,
+    },
 
     // Automatically clear mock calls, instances and results before every test
     clearMocks: true,
@@ -50,3 +53,5 @@ export default {
         '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
     },
 };
+
+export default config;
