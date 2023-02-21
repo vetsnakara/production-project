@@ -20,7 +20,7 @@ export function useTheme(): UseThemeResult {
             theme,
             toggleTheme,
         };
-    }, [theme]);
+    }, [theme, setTheme]);
 
     return result;
 }

@@ -26,30 +26,36 @@ Clear.args = {
     theme: ButtonTheme.CLEAR,
 };
 
+export const ClearInverted = Template.bind({});
+ClearInverted.args = {
+    children: 'Button',
+    theme: ButtonTheme.BACKGROUND_INVERTED,
+};
+
 export const Outline = Template.bind({});
 Outline.args = {
     children: 'Button',
-    theme: ButtonTheme.OUTLINE,
+    theme: ButtonTheme.OUTLINED,
 };
 
 export const OutlineSizeL = Template.bind({});
 OutlineSizeL.args = {
     children: 'Button',
-    theme: ButtonTheme.OUTLINE,
+    theme: ButtonTheme.OUTLINED,
     size: ButtonSize.L,
 };
 
 export const OutlineSizeXL = Template.bind({});
 OutlineSizeXL.args = {
     children: 'Button',
-    theme: ButtonTheme.OUTLINE,
+    theme: ButtonTheme.OUTLINED,
     size: ButtonSize.XL,
 };
 
 export const OutlineDark = Template.bind({});
 OutlineDark.args = {
     children: 'Button',
-    theme: ButtonTheme.OUTLINE,
+    theme: ButtonTheme.OUTLINED,
 };
 OutlineDark.decorators = [
     withTheme(Theme.DARK),

@@ -1,6 +1,5 @@
 import { Suspense } from 'react';
 import { useTheme } from './providers/ThemeProvider';
-import './styles/index.scss';
 
 import { AppRouter } from 'app/providers/Router';
 import { Navbar } from 'widgets/Navbar';
