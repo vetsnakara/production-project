@@ -30,6 +30,7 @@ module.exports = {
                 ignoreComments: true,
             },
         ],
+        'lines-between-class-members': 'off',
         // import
         'import/no-unresolved': 'off',
         'import/order': 'off',
