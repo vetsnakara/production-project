@@ -1,8 +1,8 @@
-import { RuleSetRule } from "webpack"
+import { RuleSetRule } from 'webpack';
 
 export function buildSvgLoader(): RuleSetRule {
-  return {
-    test: /\.svg$/,
-    use: ['@svgr/webpack'],
-  };
+    return {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+    };
 }

@@ -5,8 +5,8 @@ import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { classNames } from 'shared/lib/classNames';
 
 interface LangSwitcherProps {
-  className?: string;
-  short?: boolean;
+    className?: string;
+    short?: boolean;
 }
 
 export const LangSwitcher: FC<LangSwitcherProps> = (props) => {

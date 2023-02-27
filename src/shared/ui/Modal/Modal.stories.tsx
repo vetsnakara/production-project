@@ -14,17 +14,20 @@ export default {
 
 const Template: ComponentStory<typeof Modal> = (args) => <Modal {...args} />;
 
-const text = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus at quae facere cupiditate, consequuntur natus ipsum exercitationem possimus illum nobis quas beatae ex quasi consectetur corrupti vitae ratione perspiciatis dicta.';
+const text =
+    'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus at quae facere cupiditate, consequuntur natus ipsum exercitationem possimus illum nobis quas beatae ex quasi consectetur corrupti vitae ratione perspiciatis dicta.';
 
 export const Primary = Template.bind({});
 Primary.args = {
     children: text,
     isOpen: true,
+    element: document.querySelector('#root'),
 };
 
 export const Dark = Template.bind({});
 Dark.args = {
     children: text,
     isOpen: true,
+    element: document.querySelector('#root'),
 };
 Dark.decorators = [withTheme(Theme.DARK)];

@@ -1,7 +1,7 @@
-import { RuleSetRule } from "webpack"
+import { RuleSetRule } from 'webpack';
 
 export function buildTsLoader(): RuleSetRule {
-    return  {
+    return {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: /node_modules/,

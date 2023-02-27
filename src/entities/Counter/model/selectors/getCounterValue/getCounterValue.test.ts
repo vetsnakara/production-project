@@ -12,6 +12,8 @@ describe('getCounterValue', () => {
             counter: counterState,
         };
 
-        expect(getCounterValue(state as StateSchema)).toEqual(counterState.value);
+        expect(getCounterValue(state as StateSchema)).toEqual(
+            counterState.value
+        );
     });
 });

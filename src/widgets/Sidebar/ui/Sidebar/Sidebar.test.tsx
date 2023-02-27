@@ -1,9 +1,7 @@
 /* eslint-disable i18next/no-literal-string */
 import { screen, fireEvent } from '@testing-library/react';
 
-import {
-    renderWithProviders,
-} from 'shared/lib/tests/renderWithProviders/renderWithProviders';
+import { renderWithProviders } from 'shared/lib/tests/renderWithProviders/renderWithProviders';
 
 import { Sidebar } from './Sidebar';
 

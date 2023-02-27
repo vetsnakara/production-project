@@ -5,7 +5,7 @@ import { Button } from 'shared/ui/Button/Button';
 import cls from './PageError.module.scss';
 
 interface PageErrorProps {
-    className?: string
+    className?: string;
 }
 
 export const PageError: FC<PageErrorProps> = ({ className }) => {

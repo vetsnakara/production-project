@@ -57,9 +57,7 @@ OutlineDark.args = {
     children: 'Button',
     theme: ButtonTheme.OUTLINED,
 };
-OutlineDark.decorators = [
-    withTheme(Theme.DARK),
-];
+OutlineDark.decorators = [withTheme(Theme.DARK)];
 
 export const BackgroundTheme = Template.bind({});
 BackgroundTheme.args = {
@@ -94,4 +92,11 @@ SquareSizeXL.args = {
     theme: ButtonTheme.BACKGROUND_INVERTED,
     size: ButtonSize.XL,
     square: true,
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+    children: '>',
+    theme: ButtonTheme.OUTLINED,
+    disabled: true,
 };

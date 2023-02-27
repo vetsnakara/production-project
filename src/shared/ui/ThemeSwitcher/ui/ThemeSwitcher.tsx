@@ -8,7 +8,7 @@ import DarkThemeIcon from 'shared/assets/icons/theme-dark.svg';
 import LightThemeIcon from 'shared/assets/icons/theme-light.svg';
 
 interface ThemeSwitcherProps {
-  className?: string;
+    className?: string;
 }
 
 export const ThemeSwitcher: FC<ThemeSwitcherProps> = (props) => {

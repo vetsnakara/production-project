@@ -6,5 +6,10 @@
   "notFoundPage": "Страница не найдена",
   "pageError": "Произошла непредвиденная ошибка",
   "reloadPage": "Перезагрузить страницу",
-  "enterBtn": "Войти"
+  "enterBtn": "Войти",
+  "logoutBtn": "Выйти",
+  "enterUsername": "Имя пользователя",
+  "enterPassword": "Пароль",
+  "authFormTitle": "Форма авторизации",
+  "authErrorMessage": "Неравильное имя пользователя или пароль"
 }

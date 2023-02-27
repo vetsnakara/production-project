@@ -5,7 +5,7 @@ import { BuildPaths } from '../build/types/config';
 import { buildCssLoader, buildSvgLoader } from '../build/loaders';
 
 // extend webpack config for storybook
-export default ({ config }: { config: webpack.Configuration}) => {
+export default ({ config }: { config: webpack.Configuration }) => {
     const paths: BuildPaths = {
         build: '',
         html: '',
@@ -35,7 +35,7 @@ export default ({ config }: { config: webpack.Configuration}) => {
 
     config.module?.rules?.push(
         buildCssLoader({ isDev: true }),
-        buildSvgLoader(),
+        buildSvgLoader()
     );
 
     const definePlugin = new webpack.DefinePlugin({

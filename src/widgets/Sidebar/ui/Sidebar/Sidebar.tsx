@@ -14,7 +14,7 @@ import AboutIcon from 'shared/assets/icons/about.svg';
 import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
-  className?: string;
+    className?: string;
 }
 
 export function Sidebar({ className }: SidebarProps) {
@@ -51,9 +51,7 @@ export function Sidebar({ className }: SidebarProps) {
                         className={cls.item}
                     >
                         <MainIcon className={cls.icon} />
-                        <span className={cls.link}>
-                            {t('linkMainPage')}
-                        </span>
+                        <span className={cls.link}>{t('linkMainPage')}</span>
                     </AppLink>
                     <div className={cls.item}>
                         <AppLink

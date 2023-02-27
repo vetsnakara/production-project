@@ -6,7 +6,7 @@ describe('counterSlice', () => {
         const counterState: CounterSchema = { value: 10 };
 
         expect(
-            counterReducer(counterState, counterActions.decrement()),
+            counterReducer(counterState, counterActions.decrement())
         ).toEqual({ value: 9 });
     });
 
@@ -14,13 +14,13 @@ describe('counterSlice', () => {
         const counterState: CounterSchema = { value: 10 };
 
         expect(
-            counterReducer(counterState, counterActions.increment()),
+            counterReducer(counterState, counterActions.increment())
         ).toEqual({ value: 11 });
     });
 
     test('should work with empty state', () => {
-        expect(
-            counterReducer(undefined, counterActions.increment()),
-        ).toEqual({ value: 1 });
+        expect(counterReducer(undefined, counterActions.increment())).toEqual({
+            value: 1,
+        });
     });
 });

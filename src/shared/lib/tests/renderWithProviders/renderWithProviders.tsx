@@ -8,18 +8,15 @@ import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
 import { DeepPartial } from '@reduxjs/toolkit';
 
 export interface RenderWithProvidersOptions {
-    route?: string
-    initialState?: DeepPartial<StateSchema>
+    route?: string;
+    initialState?: DeepPartial<StateSchema>;
 }
 
 export function renderWithProviders(
     component: ReactNode,
-    options: RenderWithProvidersOptions = {},
+    options: RenderWithProvidersOptions = {}
 ) {
-    const {
-        route = '/',
-        initialState,
-    } = options;
+    const { route = '/', initialState } = options;
 
     return render(
         <StoreProvider initialState={initialState as StateSchema}>
@@ -28,6 +25,6 @@ export function renderWithProviders(
                     {component}
                 </I18nextProvider>
             </MemoryRouter>
-        </StoreProvider>,
+        </StoreProvider>
     );
 }

@@ -6,5 +6,10 @@
   "notFoundPage": "Page not found",
   "pageError": "Unexpected error occured",
   "reloadPage": "Reload page",
-  "enterBtn": "Enter"
+  "enterBtn": "Enter",
+  "logoutBtn": "Logout",
+  "enterUsername": "Username",
+  "enterPassword": "Password",
+  "authFormTitle": "Authorization Form",
+  "authErrorMessage": "Uncorrect username or password"
 }

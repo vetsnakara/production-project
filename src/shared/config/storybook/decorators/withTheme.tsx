@@ -1,14 +1,8 @@
+/* eslint-disable react/display-name */
 import Storybook from '@storybook/react';
-
 import { Theme } from 'app/providers/ThemeProvider';
-import { classNames } from 'shared/lib/classNames';
 
-export const withTheme = (theme: Theme) => {
-    const StoryWithTheme = (Story: Storybook.Story) => (
-        <div className={classNames('app', {}, [theme])}>
-            <Story />
-        </div>
-    );
-
-    return StoryWithTheme;
+export const withTheme = (theme: Theme) => (Story: Storybook.Story) => {
+    document.body.className = theme;
+    return <Story />;
 };

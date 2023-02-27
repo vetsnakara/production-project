@@ -18,8 +18,8 @@ export const parameters = {
 };
 
 export const decorators = [
-    withGlobalStyles,
-    withStore,
-    withRouter,
+    withGlobalStyles(),
+    withStore(),
+    withRouter(),
     withTheme(Theme.LIGHT),
 ];
