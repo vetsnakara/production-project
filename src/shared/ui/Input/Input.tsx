@@ -4,6 +4,7 @@ import React, {
     useState,
     useEffect,
     useRef,
+    memo,
 } from 'react';
 
 import { classNames } from 'shared/lib/classNames';
@@ -21,7 +22,7 @@ interface InputProps extends HTMLInputProps {
     onChange?: (value: string) => void;
 }
 
-export const Input: FC<InputProps> = (props) => {
+export const Input: FC<InputProps> = memo((props) => {
     const {
         type = 'text',
         value,
@@ -76,4 +77,4 @@ export const Input: FC<InputProps> = (props) => {
             </div>
         </div>
     );
-};
+});

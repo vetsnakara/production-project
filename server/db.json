@@ -5,5 +5,15 @@
             "username": "admin",
             "password": "123"
         }
-    ]
+    ],
+    "profile": {
+        "first": "John",
+        "lastname": "Smith",
+        "age": 33,
+        "currency": "RUB",
+        "country": "Russia",
+        "city": "Moscow",
+        "username": "admin",
+        "avatar": "https://stackoverflow.com/users/12299000/kaya3"
+    }
 }

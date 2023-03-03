@@ -1,5 +1,5 @@
 export { StoreProvider } from './ui/StoreProvider';
-export { createStore } from './config/store';
+export { createStore, AppDispatch } from './config/store';
 export {
     StateSchema,
     StateSchemaKey,

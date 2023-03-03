@@ -1,32 +1,36 @@
 Providers
 
-- use hoc withProviders to combine all providers
+-   use hoc withProviders to combine all providers
 
 Setup
 
-- use conventional commits
-- use lint-staged
-- use prettier
-- use serve to show ui test report / test coverage
+-   use conventional commits
+-   use lint-staged
+-   use prettier
+-   use serve to show ui test report / test coverage
 
 Storybook
 
-- use TS for stories args
+-   use TS for stories args
 
 Tests
 
-- use TS for jest config
-- use test coverage
-- run tests on pre-push
+-   use TS for jest config
+-   use test coverage
+-   run tests on pre-push
 
 Linting
 
-- "lint": "eslint --ignore-path .gitignore .",
-- "plugin:jest-dom/recommended" for linting in RTL test files (see Codevolution tutorial)
-- use prettier as package (+ eslint-config-prettier)
-- max-warnings=0
-- run linting on pre-commit
+-   "lint": "eslint --ignore-path .gitignore .",
+-   "plugin:jest-dom/recommended" for linting in RTL test files (see Codevolution tutorial)
+-   use prettier as package (+ eslint-config-prettier)
+-   max-warnings=0
+-   run linting on pre-commit
 
 Mocks
 
-- use MSW
+-   use MSW
+
+Modal
+
+-   use react-transition in modal

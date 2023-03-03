@@ -1,37 +1,30 @@
-import { FC, Suspense, useCallback, useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { FC, Suspense } from 'react';
 
-import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { Modal } from 'shared/ui/Modal/Modal';
+import { Loader } from 'shared/ui/Loader/Loader';
+import { classNames } from 'shared/lib/classNames/classNames';
 
 import { LoginForm } from '../LoginForm';
-import { Loader } from 'shared/ui/Loader/Loader';
 
-export const LoginModal: FC = () => {
-    const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
-    const { t } = useTranslation();
+interface LoginModalProps {
+    className?: string;
+    isOpen: boolean;
+    onClose: () => void;
+}
 
-    const handleModalOpen = useCallback(() => {
-        setIsAuthModalOpen(true);
-    }, []);
-
-    const handleModalClose = useCallback(() => {
-        setIsAuthModalOpen(false);
-    }, []);
+export const LoginModal: FC<LoginModalProps> = (props) => {
+    const { className, isOpen, onClose } = props;
 
     return (
-        <>
-            <Button
-                theme={ButtonTheme.CLEAR_INVERTED}
-                onClick={handleModalOpen}
-            >
-                {t('enterBtn')}
-            </Button>
-            <Modal lazy isOpen={isAuthModalOpen} onClose={handleModalClose}>
-                <Suspense fallback={<Loader />}>
-                    <LoginForm />
-                </Suspense>
-            </Modal>
-        </>
+        <Modal
+            className={classNames('', {}, [className])}
+            isOpen={isOpen}
+            onClose={onClose}
+            lazy
+        >
+            <Suspense fallback={<Loader />}>
+                <LoginForm onSuccess={onClose} />
+            </Suspense>
+        </Modal>
     );
 };
