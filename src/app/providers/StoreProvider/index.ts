@@ -6,4 +6,5 @@ export {
     ReducerList,
     ReducerListEntry,
     ReduxStoreWithManager,
+    ThunkConfig,
 } from './config/StateSchema';

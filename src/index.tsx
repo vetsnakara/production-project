@@ -10,14 +10,14 @@ import 'shared/config/i18n/i18n';
 import 'app/styles/index.scss';
 
 render(
-    <StoreProvider>
-        <Router>
+    <Router>
+        <StoreProvider>
             <ErrorBoundary>
                 <ThemeProvider>
                     <App />
                 </ThemeProvider>
             </ErrorBoundary>
-        </Router>
-    </StoreProvider>,
+        </StoreProvider>
+    </Router>,
     document.getElementById('root')
 );
