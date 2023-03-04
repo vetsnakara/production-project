@@ -17,6 +17,7 @@ export const parameters = {
     },
 };
 
+// order: from bottom to top
 export const decorators = [
     withStore(),
     withRouter(),
