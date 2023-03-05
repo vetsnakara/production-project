@@ -1,4 +1,4 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Theme } from 'app/providers/ThemeProvider';
 import { withTheme } from 'shared/config/storybook/decorators';
 
@@ -21,13 +21,13 @@ export const Primary = Template.bind({});
 Primary.args = {
     children: text,
     isOpen: true,
-    element: document.querySelector('#root'),
+    element: document.querySelector('#root') as HTMLElement,
 };
 
 export const Dark = Template.bind({});
 Dark.args = {
     children: text,
     isOpen: true,
-    element: document.querySelector('#root'),
+    element: document.querySelector('#root') as HTMLElement,
 };
 Dark.decorators = [withTheme(Theme.DARK)];

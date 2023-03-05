@@ -3,7 +3,7 @@ export { createStore, AppDispatch } from './config/store';
 export {
     StateSchema,
     StateSchemaKey,
-    ReducerList,
+    ReducersList as ReducerList,
     ReducerListEntry,
     ReduxStoreWithManager,
     ThunkConfig,

@@ -16,11 +16,11 @@ export function useTheme(): UseThemeResult {
             localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
             document.body.className = newTheme;
 
-            setTheme(newTheme);
+            setTheme?.(newTheme);
         };
 
         return {
-            theme,
+            theme: theme || Theme.LIGHT,
             toggleTheme,
         };
     }, [theme, setTheme]);

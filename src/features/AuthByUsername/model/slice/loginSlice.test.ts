@@ -1,4 +1,4 @@
-import { AnyAction, DeepPartial } from '@reduxjs/toolkit';
+import { AnyAction } from '@reduxjs/toolkit';
 import { loginByUsername } from '../services/loginByUsername/loginByUsername';
 
 import { LoginSchema } from '../types/loginSchema';

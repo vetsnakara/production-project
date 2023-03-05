@@ -23,6 +23,7 @@ module.exports = {
         '@typescript-eslint/no-unused-vars': ['error'],
         'no-shadow': 'off',
         'no-underscore-dangle': 'off',
+        'no-undef': 'off',
         'max-len': [
             'error',
             {

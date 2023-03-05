@@ -7,6 +7,7 @@ Setup
 -   use conventional commits
 -   use lint-staged
 -   use prettier
+-   use https://github.com/trivago/prettier-plugin-sort-imports
 -   use serve to show ui test report / test coverage
 
 Storybook
