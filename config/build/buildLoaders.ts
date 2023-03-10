@@ -11,7 +11,7 @@ import {
 
 export function buildLoaders(options: BuildOptions): RuleSetRule[] {
     return [
-        buildBabelLoader(),
+        buildBabelLoader(options),
         buildTsLoader(),
         buildCssLoader(options),
         buildSvgLoader(),

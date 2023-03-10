@@ -9,6 +9,8 @@ Setup
 -   use prettier
 -   use https://github.com/trivago/prettier-plugin-sort-imports
 -   use serve to show ui test report / test coverage
+-   use snippets in vscode
+-   use file templates in vscode or node util like generate-template-files
 
 Storybook
 
