@@ -35,27 +35,27 @@ ClearInverted.args = {
 export const Outline = Template.bind({});
 Outline.args = {
     children: 'Button',
-    theme: ButtonTheme.OUTLINED,
+    theme: ButtonTheme.OUTLINE,
 };
 
 export const OutlineSizeL = Template.bind({});
 OutlineSizeL.args = {
     children: 'Button',
-    theme: ButtonTheme.OUTLINED,
+    theme: ButtonTheme.OUTLINE,
     size: ButtonSize.L,
 };
 
 export const OutlineSizeXL = Template.bind({});
 OutlineSizeXL.args = {
     children: 'Button',
-    theme: ButtonTheme.OUTLINED,
+    theme: ButtonTheme.OUTLINE,
     size: ButtonSize.XL,
 };
 
 export const OutlineDark = Template.bind({});
 OutlineDark.args = {
     children: 'Button',
-    theme: ButtonTheme.OUTLINED,
+    theme: ButtonTheme.OUTLINE,
 };
 OutlineDark.decorators = [withTheme(Theme.DARK)];
 
@@ -97,6 +97,6 @@ SquareSizeXL.args = {
 export const Disabled = Template.bind({});
 Disabled.args = {
     children: '>',
-    theme: ButtonTheme.OUTLINED,
+    theme: ButtonTheme.OUTLINE,
     disabled: true,
 };

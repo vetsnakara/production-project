@@ -4,6 +4,7 @@ const config = {
     globals: {
         __IS_DEV__: false,
         __API__: '',
+        __PROJECT: 'jest',
     },
 
     // Automatically clear mock calls, instances and results before every test

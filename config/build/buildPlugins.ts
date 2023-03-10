@@ -11,6 +11,7 @@ export function buildPlugins({
     isDev,
     paths,
     apiUrl,
+    project,
 }: BuildOptions): WebpackPluginInstance[] {
     const progressPlugin = new webpack.ProgressPlugin();
 
@@ -26,6 +27,7 @@ export function buildPlugins({
     const definePlugin = new webpack.DefinePlugin({
         __IS_DEV__: JSON.stringify(isDev),
         __API__: JSON.stringify(apiUrl),
+        __PROJECT__: JSON.stringify(project),
     });
 
     const reactRefreshWebpackPlugin = new ReactRefreshWebpackPlugin();

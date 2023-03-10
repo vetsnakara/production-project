@@ -90,7 +90,7 @@ export const LoginForm: FC<LoginFormProps> = memo((props) => {
                     onChange={handleChangePassword}
                 />
                 <Button
-                    theme={ButtonTheme.OUTLINED}
+                    theme={ButtonTheme.OUTLINE}
                     className={cls.loginBtn}
                     onClick={handleLoginClick}
                     disabled={isLoading}

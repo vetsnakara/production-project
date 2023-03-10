@@ -1,19 +1,19 @@
 {
-    "users": [
-        {
-            "id": "1",
-            "username": "admin",
-            "password": "123"
-        }
-    ],
-    "profile": {
-        "first": "John",
-        "lastname": "Smith",
-        "age": 33,
-        "currency": "RUB",
-        "country": "Russia",
-        "city": "Moscow",
-        "username": "admin",
-        "avatar": "https://stackoverflow.com/users/12299000/kaya3"
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "123"
     }
+  ],
+  "profile": {
+    "first": "Konstantinnnnn",
+    "lastname": "Arakantsev",
+    "age": 333,
+    "currency": "EUR",
+    "country": "Kazakhstan",
+    "city": "Saint-Petersburg",
+    "username": "admin",
+    "avatar": "https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg"
+  }
 }

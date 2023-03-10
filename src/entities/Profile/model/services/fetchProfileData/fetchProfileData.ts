@@ -9,15 +9,18 @@ export const fetchProfileData = createAsyncThunk<
     ThunkConfig<string>
 >('profile/fetchProfileData', async (_, thunkApi) => {
     const {
-        // dispatch,
         rejectWithValue,
         extra: { api },
     } = thunkApi;
 
     try {
-        const { data: user } = await api.get<Profile>('/profile');
+        const { data: profile } = await api.get<Profile>('/profile');
 
-        return user;
+        if (!profile) {
+            throw new Error();
+        }
+
+        return profile;
     } catch (error) {
         return rejectWithValue('authErrorMessage');
     }

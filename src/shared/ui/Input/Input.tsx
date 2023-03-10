@@ -7,18 +7,19 @@ import React, {
     memo,
 } from 'react';
 
-import { classNames } from 'shared/lib/classNames';
+import { classNames, Mods } from 'shared/lib/classNames';
 import cls from './Input.module.scss';
 
 type HTMLInputProps = Omit<
     InputHTMLAttributes<HTMLInputElement>,
-    'value' | 'onChange' | 'autoFocus'
+    'value' | 'onChange' | 'autoFocus' | 'readonly'
 >;
 
 interface InputProps extends HTMLInputProps {
     className?: string;
-    value?: string;
+    value?: string | number;
     autoFocus?: boolean;
+    readonly?: boolean;
     onChange?: (value: string) => void;
 }
 
@@ -30,6 +31,7 @@ export const Input: FC<InputProps> = memo((props) => {
         onChange,
         className,
         autoFocus = false,
+        readOnly = false,
         ...restProps
     } = props;
 
@@ -55,8 +57,14 @@ export const Input: FC<InputProps> = memo((props) => {
         setCaretPosition(e?.target?.selectionStart);
     };
 
+    const mods: Mods = {
+        [cls.readOnly]: readOnly,
+    };
+
+    const isCaretVisible = !readOnly;
+
     return (
-        <div className={classNames(cls.inputWrapper, {}, [className])}>
+        <div className={classNames(cls.inputWrapper, mods, [className])}>
             {placeholder && (
                 <div className={cls.placeholder}>{`${placeholder}>`}</div>
             )}
@@ -65,15 +73,18 @@ export const Input: FC<InputProps> = memo((props) => {
                     ref={inputRef}
                     type={type}
                     value={value}
+                    readOnly={readOnly}
+                    className={cls.input}
                     onChange={handleChange}
                     onSelect={handleSelect}
-                    className={cls.input}
                     {...restProps}
                 />
-                <span
-                    className={cls.caret}
-                    style={{ left: caretPosition * 9 }}
-                />
+                {isCaretVisible && (
+                    <span
+                        className={cls.caret}
+                        style={{ left: caretPosition * 9 }}
+                    />
+                )}
             </div>
         </div>
     );
